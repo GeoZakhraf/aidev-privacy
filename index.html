@@ -35,7 +35,7 @@ strong{color:#e8e8ff}
 <p class="subtitle">AI DEV TOOLKIT</p>
 </div>
 
-<div class="update">📅 Last Updated: May 2026</div>
+<div class="update">📅 Last Updated: <span id="lastUpdated"></span></div>
 
 <div class="highlight">
 <strong>🛡️ Our Commitment:</strong> AI DEV TOOLKIT respects your privacy. We do NOT collect, store, or share any personal data. Period.
@@ -127,8 +127,18 @@ strong{color:#e8e8ff}
 <div class="footer">
 <p>🤖 <strong>AI DEV TOOLKIT v1.0.0</strong></p>
 <p>Made with ❤️ by GeoZakhraf</p>
-<p style="margin-top:10px">© 2026 GeoZakhraf. All rights reserved.</p>
+<p style="margin-top:10px">© <span id="currentYear"></span> GeoZakhraf. All rights reserved.</p>
 </div>
 </div>
+
+<script>
+// Auto-update date and year
+document.getElementById('lastUpdated').textContent = new Date().toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric'
+});
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
